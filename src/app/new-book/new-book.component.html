@@ -1,3 +1,14 @@
-<p>
-  new-book works!
-</p>
+<label> Name</label>
+<input type="text" #name>
+<label>Favourite Book</label>
+<input type="text" #favBook>
+<label>Description</label>
+<input type="text" #description>
+<label>Genre</label>
+<input type="text" #genre>
+<label>Favorite location to read.</label>
+<input type="text" #location>
+<label>Image Url</label>
+<input type="text" #url>
+
+<button class="btn-ghost-dark" (click)='submit(name.value,favBook.value, description.value, genre.value,location.value, url.value)'>Submit</button>

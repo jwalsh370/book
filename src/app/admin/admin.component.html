@@ -1,3 +1,4 @@
-<p>
-  admin works!
+<p *ngIf="admin">
+  You are in Admin Mode.
 </p>
+<button (click)="clickAdmin()" class="button">{{buttonString}} Mode</button>
