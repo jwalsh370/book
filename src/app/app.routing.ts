@@ -4,6 +4,10 @@ import { BookListComponent } from './book-list/book-list.component';
 import { BookDetailComponent} from './book-detail/book-detail.component';
 import { NewBookComponent } from './new-book/new-book.component';
 import { AdminComponent } from './admin/admin.component';
+import { AboutComponent } from './about/about.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
+
+
 
 const appRoutes: Routes = [
   {
@@ -18,6 +22,14 @@ const appRoutes: Routes = [
   }, {
     path: 'admin',
     component: AdminComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'edit',
+    component: EditBookComponent
   }
 ];
 

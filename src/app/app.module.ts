@@ -12,6 +12,8 @@ import { NewBookComponent } from './new-book/new-book.component';
 import { GenrePipe } from './genre.pipe';
 import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
+import { AboutComponent } from './about/about.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
 
 
 export const firebaseConfig = {
@@ -29,6 +31,8 @@ export const firebaseConfig = {
     BookListComponent,
     NewBookComponent,
     GenrePipe,
+    AboutComponent,
+    EditBookComponent,
 
 
   ],

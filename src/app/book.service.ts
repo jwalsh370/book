@@ -24,4 +24,15 @@ export class BookService {
     this.books.push(newBook);
   }
 
+
+  updateBook(localUpdatedBook) {
+  var bookEntryInFirebase = this.getBooksById(localUpdatedBook.$key);
+  bookEntryInFirebase.update({favBook: localUpdatedBook.favBook, loction: localUpdatedBook.location, description: localUpdatedBook.description});
+}
+
+  deleteBook(localBookToDelete) {
+  var bookEntryInFirebase = this.getBooksById(localBookToDelete.$key);
+  bookEntryInFirebase.remove();
+}
+
 }
