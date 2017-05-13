@@ -1,0 +1,17 @@
+{
+  "name": "book",
+  "description": "This application represents a book club",
+  "main": "",
+  "authors": [
+    "jwalsh370 <jwalsh370@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
