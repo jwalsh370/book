@@ -5,7 +5,7 @@
 <select (change)="onChange($event.target.value)" class="form-control">
   <option value="allGenres">All Genres</option>
   <option value="comic">Comic</option>
-  <option value="history">Historu</option>
+  <option value="history">History</option>
   <option value="horror">Horro</option>
   <option value="comedy">Comedy</option>
   <option value="fantasy">Fantasy</option>
@@ -23,7 +23,7 @@
         <span>Begin your book adventure.</span>
       </div>
       <div class="flip-card-inner-back">
-        <h3 class="flip-card-inner-back-title">Read with  {{book.name}}</h3>
+        <h3 class="flip-card-inner-back-title">Read with {{book.name}}</h3>
         <p class="flip-card-inner-back-text">Favorite Book: {{book.favBook}}</p>
         <button (click)="clickDetails(book)">Details</button>
         <button *ngIf="admin" (click)="clickEdit(book)">Edit</button>

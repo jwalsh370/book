@@ -26,12 +26,12 @@ export class BookService {
 
 
   updateBook(localUpdatedBook) {
-  var bookEntryInFirebase = this.getBooksById(localUpdatedBook.$key);
+  var bookEntryInFirebase = this.getBookById(localUpdatedBook.$key);
   bookEntryInFirebase.update({favBook: localUpdatedBook.favBook, loction: localUpdatedBook.location, description: localUpdatedBook.description});
 }
 
   deleteBook(localBookToDelete) {
-  var bookEntryInFirebase = this.getBooksById(localBookToDelete.$key);
+  var bookEntryInFirebase = this.getBookById(localBookToDelete.$key);
   bookEntryInFirebase.remove();
 }
 
