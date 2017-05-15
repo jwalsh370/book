@@ -30,12 +30,11 @@
                   <hr>
               </figure>
           </div>
+          <div *ngIf="admin">
+             <app-edit-book [selectedBook]="book"></app-edit-book>
+           </div>
         </div>
     </div>
   </div>
-    <div *ngIf="admin">
-       <app-edit-book [selectedBook]="book"></app-edit-book>
-     </div>
-
 
 </div>
