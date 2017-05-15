@@ -1,14 +1,34 @@
-<label> Name</label>
-<input type="text" #name>
-<label>Favourite Book</label>
-<input type="text" #favBook>
-<label>Description</label>
-<input type="text" #description>
-<label>Genre</label>
-<input type="text" #genre>
-<label>Favorite location to read.</label>
-<input type="text" #location>
-<label>Image Url</label>
-<input type="text" #url>
 
-<button class="btn-ghost-dark" (click)='submit(name.value,favBook.value, description.value, genre.value,location.value, url.value)'>Submit</button>
+<div class="form-style-5">
+<form>
+<fieldset>
+<legend><span class="number">1</span> Candidate Info</legend>
+<input type="text" #name  placeholder="Your Name *">
+<input type="text" #favbook  placeholder="Your Favorite Book *">
+<textarea   #description placeholder="Book Description *"></textarea>
+<label for="genre">Genre:</label>
+<select #genre id="genre" >
+  <optgroup label="Indoors">
+    <option value="comic">Comic</option>
+    <option value="history">History</option>
+    <option value="horror">Horro</option>
+    <option value="comedy">Comedy</option>
+    <option value="fantasy">Fantasy</option>
+    <option value="trueCrime">True Crime</option>
+    <option value="Sci-fi">Science Fiction</option>
+    <option value="autobiography">Autobiography</option>
+    <option value="other">Other</option>
+  </optgroup>
+</select>
+</fieldset>
+<fieldset>
+<legend><span  class="number">2</span> Additional Info</legend>
+<textarea name="field3" #location placeholder="Favourite location to read. *"></textarea>
+<input type="text" #url name="field2" placeholder="Image Url *">
+</fieldset>
+
+<button  (click)='submit(name.value,favBook.value, description.value, genre.value,location.value, url.value)'>Submit Info</button>
+
+<a routerLink='/'><input type="submit"  value="Return Home"/></a>
+</form>
+</div>

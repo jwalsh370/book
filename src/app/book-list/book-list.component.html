@@ -17,7 +17,19 @@
 
 <div *ngFor="let book of books | async | genre:filterByGenre" >
 
-  <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
+  <div id="foo" class="clearfix">
+      <figure>
+          <div><img src="{{book.url}}" width="150" height="150" alt="Favorite Book"></div>
+          <p>{{book.name}}'s book profile</p>
+          <p class="more">Favorite Book: {{book.favBook}}</p>
+          <br>
+          <br>
+          <button (click)="clickDetails(book)">Details</button>
+          <button *ngIf="admin" (click)="clickEdit(book)">Edit</button>
+      </figure>
+
+  </div>
+  <!-- <div class="flip-card card" ontouchstart="this.classList.toggle('hover');">
     <div class="flip-card-inner">
       <div class="flip-card-inner-front">
         <span>Begin your book adventure.</span>
@@ -29,5 +41,5 @@
         <button *ngIf="admin" (click)="clickEdit(book)">Edit</button>
       </div>
       </div>
-    </div>
+    </div> -->
   </div>
