@@ -1,0 +1,111 @@
+@import url(http://fonts.googleapis.com/css?family=Grand+Hotel);
+
+* { box-sizing: border-box; -webkit-transition: all .125s ease-in-out; }
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+html, body{
+  margin:0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: ;
+}
+
+html{
+  overflow-y: scroll;
+  background: #faeaea;
+}
+
+h1{
+  text-align: center;
+  color: #CC4B4B;
+  font-size: 4em;
+  line-height: 0.5em;
+  font-family: 'Grand Hotel', cursive;
+  font-weight: normal;
+  background: #faeaea;
+  width: auto;
+}
+
+h1:before {
+  content: '';
+  position: absolute;
+  top:1em;
+  left:0;
+  z-index: -1;
+  width: 100%;
+  height: 2px;
+  background: #CC4B4B;
+}
+
+p{
+  text-align:center;
+}
+
+p.more{
+  padding-top: 12px;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 170px;
+  left: 0;
+  -webkit-transition: all .6s ease-in-out;
+}
+
+#foo{
+  margin: 0 auto 0 auto;
+  padding: 0;
+  width: 830px;
+}
+
+#foo figure{
+  width: 150px;
+  margin: 0 0 0 20px;
+  float: left;
+  position: relative;
+}
+
+#foo figure:first-child{
+  margin: 0;
+}
+
+#foo figure img{
+  border-radius: 50%;
+  float: left;
+  position:relative;
+}
+
+#foo figure div{
+  background:linear-gradient(top, rgba(255,145,0,0.2) 0%,rgba(255,230,48,0.2) 60%), linear-gradient(20deg, rgba(255,0,0,0.5) 0%,rgba(255,0,0,0) 35%);
+  border-radius: 50%;
+  float: left;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+  margin: 0 0 10px 0;
+}
+
+#foo figure p:first-of-type{
+  font-weight:bold;
+}
+
+#foo figure:hover p.more{
+  overflow: hidden;
+  opacity: 1;
+}
+
+#foo figure.doTheFadeAway{
+  -webkit-transform: scale(0.8);
+  opacity:0.8;
+}
+
+#foo figure.doTheFadeAway div{
+  box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+#foo figure.doTheFadeAway img{
+  opacity:0.4;
+  z-index:-1;
+  -webkit-filter:sepia(20%) contrast(80%);
+}

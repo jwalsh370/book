@@ -12,22 +12,19 @@
     </div>
 </div> -->
 
-<div id="container">
-  <div class="info">
-    <h1 class="name">{{(bookToDisplay | async)?.name}}</h1>
-    <h3 class="position"><a href="#">Favourite Book {{(bookToDisplay | async)?.favBook}}</a></h3>
-    <p>Genre: {{(bookToDisplay | async)?.genre}}</p>
-    <h4>Favorite reading location: {{(bookToDisplay | async)?.location}}</h4>
-  </div>
-  <div class="social">
-    <a href=""><i class="icon-twitter"></i></a>
+<div id="gradient"></div>
+<div id="card">
+  <img src="{{(bookToDisplay | async)?.url}}"/>
+  <h2>{{(bookToDisplay | async)?.name}}</h2>
+  <p>Favorite book: <br> {{(bookToDisplay | async)?.favBook}} </p>
+  <p>Favourite Book Description: <br> {{(bookToDisplay | async)?.description}}</p>
+  <p>Genre: <br> {{(bookToDisplay | async)?.genre}}</p>
+  <p>Favorite reading location: <br> {{(bookToDisplay | async)?.location}}</p>
 
-    <a href=""><i class="icon-linkedin"></i></a>
 
-    <a href=""><i class="icon-facebook"></i></a>
 
-    <a href=""><i class="icon-google-plus"></i></a>
-
-    <a href=""><i class="icon-github-alt"></i></a>
-  </div>
+  <!-- <span class="left bottom">tel: 731 366 ***</span>
+  <span class="right bottom">adress: Czech Republic</span> -->
 </div>
+
+  <app-edit-book [selectedBook]="book"></app-edit-book>
