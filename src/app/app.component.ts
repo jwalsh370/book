@@ -8,7 +8,7 @@ import { AdminService} from './admin.service';
   providers: [AdminService]
 })
 export class AppComponent implements OnInit {
-  title = 'Book Binge';
+  title = 'Book Bag';
   admin: boolean;
   adminString: string;
 

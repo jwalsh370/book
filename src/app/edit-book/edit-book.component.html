@@ -1,15 +1,15 @@
 <h4>Edit {{book.name}}'s details.'</h4>
 
 <label>New favorite book:</label>
-<input type="text"  [(ngModel)]="selectedBook.favBook">
+<input [(ngModel)]="selectedBook.favBook">
 <br>
 
 <label>New favorite Location:</label>
-<input type="text" [(ngModel)]="selectedBook.location">
+<input [(ngModel)]="selectedBook.location">
 <br>
 
 <label>New Book Description:</label>
-<textarea  type="text"  [(ngModel)]="selectedBook.description"></textarea>
+<textarea  [(ngModel)]="selectedBook.description"></textarea>
 
 <button (click)="beginUpdatedBook(selectedBook)">Update</button>
 <hr>
