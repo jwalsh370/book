@@ -1,4 +1,4 @@
-<div class="f-row responsive box-dark border">
+<!-- <div class="f-row responsive box-dark border">
   <div class="f-col-4 bg-light box-light">
     <div>
       <h2>{{(bookToDisplay | async)?.name}}</h2>
@@ -10,4 +10,24 @@
       <img src="{{book.url}}" alt="book art" class="bookImg" />
 
     </div>
+</div> -->
+
+<div id="container">
+  <div class="info">
+    <h1 class="name">{{(bookToDisplay | async)?.name}}</h1>
+    <h3 class="position"><a href="#">Favourite Book {{(bookToDisplay | async)?.favBook}}</a></h3>
+    <p>Genre: {{(bookToDisplay | async)?.genre}}</p>
+    <h4>Favorite reading location: {{(bookToDisplay | async)?.location}}</h4>
+  </div>
+  <div class="social">
+    <a href=""><i class="icon-twitter"></i></a>
+
+    <a href=""><i class="icon-linkedin"></i></a>
+
+    <a href=""><i class="icon-facebook"></i></a>
+
+    <a href=""><i class="icon-google-plus"></i></a>
+
+    <a href=""><i class="icon-github-alt"></i></a>
+  </div>
 </div>
