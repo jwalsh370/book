@@ -1,16 +1,14 @@
-<h4>Edit {{selectedBook.name}}'s details.</h4>
+<div class="form-style-5">
+    <fieldset>
+      <legend><span class="number">1</span>Edit {{selectedBook.name}}'s details.</legend>
+      <input type="text"  [(ngModel)]="selectedBook.favBook" placeholder="Your Favorite Book *">
+      <textarea   [(ngModel)]="selectedBook.description" placeholder="Book Description"></textarea>
+      <textarea  [(ngModel)]="selectedBook.location" placeholder="Favourite location to read"></textarea>
+      <button (click)="beginUpdatedBook(selectedBook)">Update</button>
+      <hr>
+      <button (click)="beginDeletingBook(selectedBook)">Delete</button>
+    </fieldset>
 
-<label>New favorite book:</label>
-<input [(ngModel)]="selectedBook.favBook">
-<br>
-
-<label>New favorite Location:</label>
-<input [(ngModel)]="selectedBook.location">
-<br>
-
-<label>New Book Description:</label>
-<textarea  [(ngModel)]="selectedBook.description"></textarea>
-
-<button (click)="beginUpdatedBook(selectedBook)">Update</button>
+<!-- <button (click)="beginUpdatedBook(selectedBook)">Update</button>
 <hr>
-<button (click)="beginDeletingBook(selectedBook)">Delete</button>
+<button (click)="beginDeletingBook(selectedBook)">Delete</button> -->
