@@ -25,12 +25,10 @@
           <br>
           <br>
           <button (click)="clickDetails(book)">Details</button>
-          <div *ngIf="currentRoute === '/admin'">
-             {{book.description}}
+          <div *ngIf="admin">
              <hr>
              <app-edit-book [selectedBook]="book"></app-edit-book>
            </div>
-          <button *ngIf="admin" (click)="clickEdit(book)">Edit</button>
       </figure>
 
   </div>
