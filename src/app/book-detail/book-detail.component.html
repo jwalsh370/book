@@ -1,30 +1,14 @@
-<!-- <div class="f-row responsive box-dark border">
-  <div class="f-col-4 bg-light box-light">
-    <div>
-      <h2>{{(bookToDisplay | async)?.name}}</h2>
-      <h3>Favourite Book {{(bookToDisplay | async)?.favBook}}</h3>
-      <h4>Favourite Book Description: {{(bookToDisplay | async)?.description}}
-      </h4>
-      <h4>Genre: {{(bookToDisplay | async)?.genre}}</h4>
-      <h4>Favorite reading location: {{(bookToDisplay | async)?.location}}</h4>
-      <img src="{{book.url}}" alt="book art" class="bookImg" />
 
-    </div>
-</div> -->
+<div class="container">
+  <div id="gradient"></div>
+  <div id="card">
+    <img src="{{(bookToDisplay | async)?.url}}"/>
+    <h2>{{(bookToDisplay | async)?.name}}</h2>
+    <p>Favorite book: <br> {{(bookToDisplay | async)?.favBook}} </p>
+    <p>Favourite Book Description: <br> {{(bookToDisplay | async)?.description}}</p>
+    <p>Genre: <br> {{(bookToDisplay | async)?.genre}}</p>
+    <p>Favorite reading location: <br> {{(bookToDisplay | async)?.location}}</p>
+  </div>
 
-<div id="gradient"></div>
-<div id="card">
-  <img src="{{(bookToDisplay | async)?.url}}"/>
-  <h2>{{(bookToDisplay | async)?.name}}</h2>
-  <p>Favorite book: <br> {{(bookToDisplay | async)?.favBook}} </p>
-  <p>Favourite Book Description: <br> {{(bookToDisplay | async)?.description}}</p>
-  <p>Genre: <br> {{(bookToDisplay | async)?.genre}}</p>
-  <p>Favorite reading location: <br> {{(bookToDisplay | async)?.location}}</p>
-
-
-
-  <!-- <span class="left bottom">tel: 731 366 ***</span>
-  <span class="right bottom">adress: Czech Republic</span> -->
+    <app-edit-book [selectedBook]="book"></app-edit-book>
 </div>
-
-  <app-edit-book [selectedBook]="book"></app-edit-book>

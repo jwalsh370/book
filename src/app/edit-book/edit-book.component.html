@@ -11,6 +11,6 @@
 <label>New Book Description:</label>
 <textarea [(ngModel)]="selectedBook.description"></textarea>
 
-<button (click)="beginUpdatedBook(Book)">Update</button>
+<button (click)="beginUpdatedBook(selectedBook)">Update</button>
 <hr>
-<button (click)="beginDeletingBook(Book)">Delete</button>
+<button (click)="beginDeletingBook(selectedBook)">Delete</button>

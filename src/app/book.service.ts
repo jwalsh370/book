@@ -26,7 +26,8 @@ export class BookService {
 
 
   updateBook(localUpdatedBook) {
-  var bookEntryInFirebase = this.getBookById(localUpdatedBook.$key);
+  var bookEntryInFirebase =
+  this.getBookById(localUpdatedBook.$key);
   bookEntryInFirebase.update({favBook: localUpdatedBook.favBook, location: localUpdatedBook.location, description: localUpdatedBook.description});
   }
 
