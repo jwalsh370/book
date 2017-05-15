@@ -15,27 +15,27 @@
     <option value="autobiography">Autobiography</option>
     <option value="other">Other</option>
   </select>
-
-  <div *ngFor="let book of books | async | genre:filterByGenre">
-    <div class="row">
-      <div class="col-md-12">
-        <div id="foo" class="clearfix">
-            <figure>
-                <div><img src="{{book.url}}" width="150" height="150" alt="Favorite Book"></div>
-                <p>{{book.name}}'s book profile</p>
-                <p class="more">Favorite Book: {{book.favBook}}</p>
-                <br>
-                <br>
-                <br>
-                <button class= "btn" (click)="clickDetails(book)">{{book.name}}'s Details</button>
-                <hr>
-            </figure>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngFor="let book of books | async | genre:filterByGenre">
+          <div id="foo" class="clearfix">
+              <figure>
+                  <div><img src="{{book.url}}" width="150" height="150" alt="Favorite Book"></div>
+                  <p>{{book.name}}'s book profile</p>
+                  <p class="more">Favorite Book: {{book.favBook}}</p>
+                  <br>
+                  <br>
+                  <br>
+                  <button class= "btn" (click)="clickDetails(book)">{{book.name}}'s Details</button>
+                  <hr>
+              </figure>
+          </div>
         </div>
-      </div>
     </div>
+  </div>
     <div *ngIf="admin">
        <app-edit-book [selectedBook]="book"></app-edit-book>
      </div>
-  </div>
+
 
 </div>
