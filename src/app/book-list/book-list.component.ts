@@ -25,6 +25,7 @@ export class BookListComponent implements OnInit {
   ngOnInit() {
     this.books = this.bookService.getBooks();
     this.admin = this.adminService.getAdmin();
+    console.log(this.router.url);
   }
 
   clickDetails(clickedBook) {

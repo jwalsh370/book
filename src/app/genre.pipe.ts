@@ -14,7 +14,7 @@ export class GenrePipe implements PipeTransform {
         return input;
       } else  {
         for(var i = 0; i < input.length; i++){
-          if(input[i].genre.toLowerCase().includes(selectGenre.toLowerCase())) {
+          if(input[i].genre.includes(selectGenre)) {
             output.push(input[i]);
           }
         }
