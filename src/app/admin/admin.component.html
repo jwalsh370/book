@@ -2,35 +2,6 @@
   You are in Admin Mode.
 </p>
 <button class="btn" (click)="clickAdmin()" class="button">{{buttonString}} Mode</button>
-
-<!-- <div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Add New Book to Inventory</h3>
-  </div>
-  <div class="panel-body">
-    <div>
-      <div>
-        <label>Favorite Book:</label>
-        <br>
-        <input #newFavBook>
-      </div>
-
-      <div>
-        <label>Favorite Location to read:</label>
-        <br>
-        <input #newLocation>
-      </div>
-
-      <div>
-        <label>Book Description:</label>
-        <br>
-        <textarea #newDescription></textarea>
-      </div>
-      <button (click)="submitForm(newFavBook.value, newLocation.value, newDescription.value); newFavBook.value=''; newLocation.value=''; newDescription.value=''">Add</button>
-    </div>
-  </div>
-</div> -->
-
 <div>
   <app-book-list></app-book-list>
 </div>
