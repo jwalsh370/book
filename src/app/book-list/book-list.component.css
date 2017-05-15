@@ -109,3 +109,7 @@ p.more{
   z-index:-1;
   -webkit-filter:sepia(20%) contrast(80%);
 }
+
+.genreSelect {
+  width: 100px;
+}

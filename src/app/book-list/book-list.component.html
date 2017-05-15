@@ -1,38 +1,41 @@
-<p *ngIf="admin">
-  You are in Admin Mode.
-</p>
+<div class="container">
+  <p *ngIf="admin">
+    You are in Admin Mode.
+  </p>
 
-<select (change)="onChange($event.target.value)" class="form-control">
-  <option value="allGenres">All Genres</option>
-  <option value="comic">Comic</option>
-  <option value="history">History</option>
-  <option value="horror">Horror</option>
-  <option value="comedy">Comedy</option>
-  <option value="fantasy">Fantasy</option>
-  <option value="trueCrime">True Crime</option>
-  <option value="Sci-fi">Science Fiction</option>
-  <option value="autobiography">Autobiography</option>
-  <option value="other">Other</option>
-</select>
+  <select (change)="onChange($event.target.value)" class="form-control genreSelect">
+    <option value="allGenres">All Genres</option>
+    <option value="comic">Comic</option>
+    <option value="history">History</option>
+    <option value="horror">Horror</option>
+    <option value="comedy">Comedy</option>
+    <option value="fantasy">Fantasy</option>
+    <option value="trueCrime">True Crime</option>
+    <option value="Sci-fi">Science Fiction</option>
+    <option value="autobiography">Autobiography</option>
+    <option value="other">Other</option>
+  </select>
 
-<div *ngFor="let book of books | async | genre:filterByGenre">
-  <div class="row">
-    <div class="col-md-6">
-      <div id="foo" class="clearfix">
-          <figure>
-              <div><img src="{{book.url}}" width="150" height="150" alt="Favorite Book"></div>
-              <p>{{book.name}}'s book profile</p>
-              <p class="more">Favorite Book: {{book.favBook}}</p>
-              <br>
-              <br>
-              <br>
-              <button class= "btn" (click)="clickDetails(book)">{{book.name}}'s Details</button>
-              <hr>
-          </figure>
+  <div *ngFor="let book of books | async | genre:filterByGenre">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="foo" class="clearfix">
+            <figure>
+                <div><img src="{{book.url}}" width="150" height="150" alt="Favorite Book"></div>
+                <p>{{book.name}}'s book profile</p>
+                <p class="more">Favorite Book: {{book.favBook}}</p>
+                <br>
+                <br>
+                <br>
+                <button class= "btn" (click)="clickDetails(book)">{{book.name}}'s Details</button>
+                <hr>
+            </figure>
+        </div>
       </div>
     </div>
+    <div *ngIf="admin">
+       <app-edit-book [selectedBook]="book"></app-edit-book>
+     </div>
   </div>
-  <div *ngIf="admin">
-     <app-edit-book [selectedBook]="book"></app-edit-book>
-   </div>
+
 </div>
